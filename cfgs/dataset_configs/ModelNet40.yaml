@@ -1,0 +1,6 @@
+NAME: ModelNet
+# DATA_PATH: data/ModelNet/modelnet40_normal_resampled
+DATA_PATH: /home/feijiajun/datasets/ModelNet40PointBERT
+N_POINTS: 8192
+NUM_CATEGORY: 40
+USE_NORMALS: FALSE

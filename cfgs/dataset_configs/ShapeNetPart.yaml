@@ -1,0 +1,5 @@
+NAME: PartNormalDataset
+DATA_PATH: /home/feijiajun/datasets/ShapeNetPartNormal
+NPOINTS: 2048
+CLASS_CHOICE: null
+USE_NORMALS: False
