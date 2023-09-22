@@ -1,24 +1,6 @@
-## Example commands
-
-Single GPU / Mutiple GPUs (DataParallel)
-```
-CUDA_VISIBLE_DEVICES=<GPU> python main.py --config cfgs/pretrain.yaml --exp_name <output_file_name>
-```
-
-Multiple GPUs (DistributedDataParallel)
-```
-CUDA_VISIBLE_DEVICES=<GPU> torchrun --nproc_per_node <num_of_gpus> main.py --config cfgs/pretrain.yaml --exp_name <output_file_name> --launcher pytorch
-```
-
-Test
-```
-CUDA_VISIBLE_DEVICES=<GPU> python main.py --config cfgs/finetune/modelnet.yaml --test --exp_name <output_file_name>
-```
 
 
-# DA
-
-## Fine-Tuning Point Cloud Transformers with Dynamic Aggregation
+# Fine-Tuning Point Cloud Transformers with Dynamic Aggregation
 
 The official implementation of DA, based on the official implementation of Point-MAE. Slight modification.
 
@@ -170,6 +152,24 @@ CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config reserve/shapenetpart/DA-Ligh
 # test
 CUDA_VISIBLE_DEVICES=<GPUs> python main.py --config reserve/shapenetpart/DA-Light/config.yaml --test_partseg --exp_name <output_file_name> --ckpts reserve/shapenetpart/DA-Light/ckpt-best.pth
 ```
+
+## 5. Example commands on multiple GPUs
+
+Single GPU / Mutiple GPUs (DataParallel)
+```
+CUDA_VISIBLE_DEVICES=<GPU> python main.py --config <cfg_path> --exp_name <output_file_name>
+```
+
+Multiple GPUs (DistributedDataParallel)
+```
+CUDA_VISIBLE_DEVICES=<GPU> torchrun --nproc_per_node <num_of_gpus> main.py --config <cfg_path> --exp_name <output_file_name> --launcher pytorch
+```
+
+Test
+```
+CUDA_VISIBLE_DEVICES=<GPU> python main.py --config cfgs/finetune/modelnet.yaml --test --exp_name <output_file_name>
+```
+
 
 ## Acknowledgements
 
